@@ -23,7 +23,7 @@ class UpdateDirectorioRequest extends FormRequest
      */
     public function rules()
     {
-        // dd($this->route('directorio')->id);
+        // dd($this->route('directorio')->id); debe ser el mismo que aparece en llaves en la route:list {directorio}
         return [
             'nombre'=>'required|min:5|max:100',
             'telefono'=>'required|unique:directorios,telefono,'.$this->route('directorio')->id
